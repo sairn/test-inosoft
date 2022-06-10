@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Api;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,4 +18,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('kendaraan')->group(function () {
+    Route::get('/', [Api\KendaraanController::class, 'get']);
+    Route::get('/{id}/{fff}', [Api\KendaraanController::class, 'read']);
+    Route::post('/create', [Api\KendaraanController::class, 'create']);
+    Route::post('/{id}', [Api\KendaraanController::class, 'update']);
+    Route::delete('/{id}', [Api\KendaraanController::class, 'delete']);
 });
