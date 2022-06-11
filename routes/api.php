@@ -26,4 +26,6 @@ Route::prefix('kendaraan')->group(function () {
     Route::post('/create', [Api\KendaraanController::class, 'create']);
     Route::post('/{id}', [Api\KendaraanController::class, 'update']);
     Route::delete('/{id}', [Api\KendaraanController::class, 'delete']);
+    Route::get('/stokmobil', [Api\MobilController::class, 'get']);
+    Route::get('/stokmotor', [Api\MotorController::class, 'get']);
 });

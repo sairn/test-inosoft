@@ -3,31 +3,32 @@
 namespace App\Repositories;
 
 use App\Models\Kendaraan;
+use App\Models\Mobil;
 
 class KendaraanRepository
 {
     public function get(array $params)
     {
-        return Kendaraan::where($params)->get();
+        return Mobil::where($params)->get();
     }
 
     public function read(string $id)
     {
-        return Kendaraan::find($id);
+        return Mobil::find($id);
     }
 
     public function create(array $params)
     {
-        return Kendaraan::create($params);
+        return Mobil::create($params);
     }
 
     public function update(array $params, $id)
     {
-        return Kendaraan::find($id)->update($params);
+        return Mobil::find($id)->update($params);
     }
 
     public function delete(string $id)
     {
-        return Kendaraan::find($id)->delete();
+        return Mobil::find($id)->delete();
     }
 }

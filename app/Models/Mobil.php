@@ -2,13 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-//use Illuminate\Database\Eloquent\Model;
-use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
-
-class Mobil extends Eloquent
+class Mobil extends Kendaraan
 {
-    use HasFactory;
-    protected $connection = 'mongodb';
-    protected $fillable = ['mesin', 'kapasitas', 'tipe', 'stok'];
+    protected $fillable = [
+        'tahun', 'warna', 'harga',
+        'mesin', 'kapasitas', 'tipe',
+    ];
 }

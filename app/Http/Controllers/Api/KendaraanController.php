@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Kendaraan;
 use App\Services\KendaraanService;
 use Illuminate\Http\Request;
 
@@ -18,7 +17,6 @@ class KendaraanController extends Controller
 
     public function get(Request $request)
     {
-        // dd($request);
         return $this->kendaraanService->get($request->all());
     }
 

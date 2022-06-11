@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Mobil;
+use App\Models\Motor;
 use Faker\Factory;
 use Illuminate\Database\Seeder;
 
-class MobilSeeder extends Seeder
+class MotorSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,13 +18,13 @@ class MobilSeeder extends Seeder
         $faker = Factory::create('id_ID');
 
         for ($i = 0; $i < 10; $i++) {
-            Mobil::create([
+            Motor::create([
                 'tahun' => $faker->randomElement($array = [1995, 2000, 2005, 2010]),
                 'warna' => $faker->randomElement($array = ['hitam', 'putih', 'biru', 'merah']),
-                'harga' => $faker->randomElement($array = [100000000, 150000000, 175000000, 200000000]),
-                'mesin' => $faker->randomElement($array = ['1000 cc', '1200 cc', '1500 cc', '2000 cc']),
-                'kapasitas' => $faker->randomElement($array = ['2 orang', '4 orang', '6 orang', '8 orang']),
-                'tipe' => $faker->randomElement($array = ['MPV', 'SUV', 'Sedan', 'Sports'])
+                'harga' => $faker->randomElement($array = [15000000, 20000000, 25000000, 30000000]),
+                'mesin' => $faker->randomElement($array = ['110cc', '125cc', '150cc', '160cc']),
+                'suspensi' => $faker->randomElement($array = ['single shock', 'dual shock']),
+                'transmis' => $faker->randomElement($array = ['Manual', 'Matic'])
 
             ]);
         }
