@@ -7,7 +7,7 @@ Create fake data for motor
 
 # Testing
 Lihat stok kendaraan mobil
-[stok mobil](http://localhost:8000/api/kendaraan/stokmobil)
+http://localhost:8000/api/kendaraan/stokmobil
 
 Lihat stok kendaraan motor
-[stok motor](http://localhost:8000/api/kendaraan/stokmotor)
+http://localhost:8000/api/kendaraan/stokmotor
