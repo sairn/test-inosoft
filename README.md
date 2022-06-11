@@ -7,7 +7,7 @@ Create fake data for motor
 
 # Testing
 Lihat stok kendaraan mobil
-`http://localhost:8000/api/kendaraan/stokmobil`
+[stok mobil](http://localhost:8000/api/kendaraan/stokmobil)
 
 Lihat stok kendaraan motor
-`http://localhost:8000/api/kendaraan/stokmotor`
+[stok motor](http://localhost:8000/api/kendaraan/stokmotor)
